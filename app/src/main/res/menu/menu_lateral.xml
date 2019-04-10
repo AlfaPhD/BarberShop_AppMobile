@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_agendamentos"
+              android:icon="@drawable/ic_agenda_black"
+              android:title="Agendamentos" android:checked="true"/>
+        <item android:id="@+id/nav_servicos"
+              android:icon="@drawable/ic_barber_black"
+              android:title="Serviços" android:checked="true"/>
+        <item android:id="@+id/nav_produtos"
+              android:icon="@drawable/ic_compra_black"
+              android:title="Produtos" android:checked="true"/>
+        <item android:id="@+id/nav_forum" android:title="Fórum"
+              android:icon="@drawable/ic_forum_black"/>
+        <item android:id="@+id/nav_mensagens" android:title="Mensagens"
+              android:icon="@drawable/ic_chat_black" />
+        <item android:id="@+id/nav_localizacao" android:title="Localização"
+              android:icon="@drawable/ic_local_black" />
+        <item android:id="@+id/nav_config"
+              android:icon="@drawable/ic_configuracoes_black"
+              android:title="Configurações" />
+        <item android:id="@+id/nav_sair"
+              android:icon="@drawable/ic_sair_black"
+              android:title="Sair" />
+    </group>
+</menu>

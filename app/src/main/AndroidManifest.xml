@@ -27,6 +27,9 @@
                   android:theme="@style/AppTheme.Toolbar"></activity>
         <activity android:name=".QuartaTelaActivity"
                   android:theme="@style/AppTheme.Toolbar"></activity>
+        <activity android:name=".ProdutoActivity"
+                  android:theme="@style/AppTheme.Toolbar"
+                  android:parentActivityName=".TelaInicialActivity"/>
     </application>
 
 </manifest>
