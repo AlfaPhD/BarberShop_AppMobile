@@ -23,20 +23,14 @@ class ProdutoActivity : DebugActivity() {
         setSupportActionBar(toolbar)
 
         // alterar título da ActionBar
-        supportActionBar?.title = produto?.nomeProduto
+        supportActionBar?.title = produto?.nome
 
         // up navigation
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         // atualizar dados do carro
         var texto = findViewById<TextView>(R.id.nomeProduto)
-        texto.text = produto?.nomeProduto
-        var imagem = findViewById<ImageView>(R.id.imagemProduto)
-        Picasso.with(this).load(produto?.foto).fit().into(imagem,
-            object: com.squareup.picasso.Callback{
-                override fun onSuccess() {}
+        texto.text = produto?.nome
 
-                override fun onError() { }
-            })
     }
 }

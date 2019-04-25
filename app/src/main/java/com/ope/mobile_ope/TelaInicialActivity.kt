@@ -64,14 +64,22 @@ class TelaInicialActivity : DebugActivity(), NavigationView.OnNavigationItemSele
     }
 
     fun taskProdutos() {
-        this.produtos = ProdutoService.getProduto(context)
-        // atualizar lista
-        recyclerProdutos?.adapter = ProdutoAdapter(produtos) {onClickProdutos(it)}
+        Thread {
+            // Código para procurar as servicos
+            // que será executado em segundo plano / Thread separada
+            this.produtos = ProdutoService.getProduto(context)
+            runOnUiThread {
+                // Código para atualizar a UI com a lista de servicos
+                recyclerProdutos?.adapter =
+                    ProdutoAdapter(produtos) { onClickProdutos(it) }
+
+            }
+        }.start()
     }
 
     // tratamento do evento de clicar em uma disciplina
     fun onClickProdutos(produto: Produto) {
-        Toast.makeText(context, "Clicou disciplina ${produto.nomeProduto}", Toast.LENGTH_SHORT).show()
+        Toast.makeText(context, "Clicou disciplina ${produto.nome}", Toast.LENGTH_SHORT).show()
         val intent = Intent(context, ProdutoActivity::class.java)
         intent.putExtra("produto", produto)
         startActivity(intent)

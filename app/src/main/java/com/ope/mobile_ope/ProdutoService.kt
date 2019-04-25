@@ -1,19 +1,32 @@
 package com.ope.mobile_ope
 
 import android.content.Context
+import android.util.Log
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 object ProdutoService {
 
+    val host = Host().host
+    val TAG = "WS_LMSApp"
+
     fun getProduto(context: Context) : List<Produto> {
-        val produtos = mutableListOf<Produto>()
-        for (i in 1..10){
-            val d = Produto()
-            d.nomeProduto = "Gel $i"
-            d.descricao = "Descrição $i"
-            d.foto = "https://d1nhio0ox7pgb.cloudfront.net/_img/o_collection_png/green_dark_grey/256x256/plain/shower_gel.png"
-            d.preco = "Preço R$ $i"
-            produtos.add(d)
+        if (AndroidUtils.isInternetDisponivel(context)) {
+            val url = "$host/apiproduto"
+            val json = HttpHelper.get(url)
+            Log.d(TAG, json)
+            return parserJson<List<Produto>>(json)
+        } else {
+            return ArrayList<Produto>()
         }
-        return produtos
+    }
+    fun save(produto: Produto): Response {
+        val json = HttpHelper.post("$host/apiproduto/", produto.toJson())
+        return parserJson<Response>(json)
+    }
+
+    inline fun <reified T> parserJson(json: String): T {
+        val type = object : TypeToken<T>(){}.type
+        return Gson().fromJson<T>(json, type)
     }
 }

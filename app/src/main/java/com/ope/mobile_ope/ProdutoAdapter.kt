@@ -18,13 +18,13 @@ class ProdutoAdapter (
     // ViewHolder com os elementos da tela
     class ProdutosViewHolder(view: View): RecyclerView.ViewHolder(view) {
         val cardNome: TextView
-        val cardImg : ImageView
-        var cardProgress: ProgressBar
+        val cardValor : TextView
+        var cardEspecificacao: TextView
         var cardView: CardView
         init {
             cardNome = view.findViewById<TextView>(R.id.card_nome)
-            cardImg = view.findViewById<ImageView>(R.id.card_img)
-            cardProgress = view.findViewById<ProgressBar>(R.id.card_progress)
+            cardValor = view.findViewById<TextView>(R.id.card_valor)
+            cardEspecificacao = view.findViewById<TextView>(R.id.card_especificacao)
             cardView = view.findViewById<CardView>(R.id.card_produtos)
         }
     }
@@ -45,19 +45,10 @@ class ProdutoAdapter (
 // recuperar objeto disciplina
         val produto = produtos[position]
 // atualizar dados de disciplina
-        holder.cardNome.text = produto.nomeProduto
-        holder.cardProgress.visibility = View.VISIBLE
-// download da imagem
-        Picasso.with(context).load(produto.foto).fit().into(holder.cardImg,
+        holder.cardNome.text = produto.nome
+        holder.cardValor.text = produto.valor_unitario
+        holder.cardEspecificacao.text = produto.especificacao
 
-            object: com.squareup.picasso.Callback{
-                override fun onSuccess() {
-                    holder.cardProgress.visibility = View.GONE
-                }
-                override fun onError() {
-                    holder.cardProgress.visibility = View.GONE
-                }
-            })
 
 // adiciona evento de clique
         holder.itemView.setOnClickListener {onClick(produto)}
