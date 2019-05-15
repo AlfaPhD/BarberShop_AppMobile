@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "779737326869",
+    "firebase_url": "https://barbearia-lucas.firebaseio.com",
+    "project_id": "barbearia-lucas",
+    "storage_bucket": "barbearia-lucas.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:779737326869:android:7568578fb5ac9ebd",
+        "android_client_info": {
+          "package_name": "com.ope.mobile_ope"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "779737326869-i2lh4l5t0cmlhie8edc734hkcd8p1pdr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3_EaZ1cLejKSWS8xaY-5IGXsT9Buq2e8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "779737326869-i2lh4l5t0cmlhie8edc734hkcd8p1pdr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

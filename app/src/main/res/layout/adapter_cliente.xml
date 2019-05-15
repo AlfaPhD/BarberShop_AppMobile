@@ -5,7 +5,7 @@
     xmlns:card_view="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:id="@+id/card_produtos"
+    android:id="@+id/card_cliente"
     android:layout_margin="6dp"
     app:cardElevation="3dp"
     app:cardPreventCornerOverlap="false"
@@ -19,21 +19,28 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
         <TextView
-            android:id="@+id/cardnomeProduto"
+            android:id="@+id/cardNomeCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="16dp"
             android:textSize="20sp" />
         <TextView
-            android:id="@+id/cardValorProduto"
+            android:id="@+id/cardApelidoCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
             android:textSize="20sp" />
         <TextView
-            android:id="@+id/cardEspecificacaoProduto"
+            android:id="@+id/cardEmailCliente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="8dp"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/cardCelularCliente"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="16dp"

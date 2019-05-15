@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:layout_editor_absoluteX="8dp"
+            tools:layout_editor_absoluteY="8dp">
+
+
+        <TextView
+                android:id="@+id/textViewNome"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nome" />
+
+        <EditText
+                android:id="@+id/edtNomeCabeleleiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Nome" />
+
+        <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="E-mail" />
+
+        <EditText
+                android:id="@+id/edtEmailCabeleleliro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textEmailAddress"
+                android:hint="exemplo@exemplo.com"/>
+
+        <TextView
+                android:id="@+id/textViewTelefone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Telefone" />
+
+        <com.vicmikhailau.maskededittext.MaskedEditText
+                android:id="@+id/edtTelefoneCabeleleiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="phone"
+                app:mask="@string/mask_telefone"
+                android:hint="99999-9999"/>
+
+        <TextView
+                android:id="@+id/textViewSenha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Senha" />
+
+        <EditText
+                android:id="@+id/edtSenhaCabeleleiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:hint="senha"/>
+
+        <Button
+                android:id="@+id/btnSalvarCabeleleiro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Salvar" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
